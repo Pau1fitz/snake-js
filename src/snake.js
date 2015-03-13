@@ -81,4 +81,14 @@ window.onload = function ()
     map[rndX][rndY] = 1;
     return map;
   }
+
+  function showGameOver() {
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.font = "16px sans-serif";
+
+    ctx.fillText("Game over!", (canvas.width / 2 ) - (ctx.measureText('Game Over!').width/2));
+    ctx.font = '12px sans-serif';
+    ctx.fillText('Your Score Was: ' + score);
+  };
 };
